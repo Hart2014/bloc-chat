@@ -34,14 +34,17 @@ module.exports = function(grunt) {
                     expand: true,
                     src: [ './assets/**/*.{png,jpg,jpeg,mp3}' ],
                     dest: './dist',
+                    cwd: './app'
                 }, {
                     expand: true,
                     src: [ './**/*.html' ],
                     dest: './dist',
+                    cwd: './app/pages'
                 }, {
                     expand: true,
                     src: [ './**/*.css' ],
                     dest: './dist/styles',
+                    cwd: './app/styles'
                 }, {
                     expand: true,
                     src: [ './**/*.js' ],
@@ -51,6 +54,7 @@ module.exports = function(grunt) {
                     expand: true,
                     src: [ './**/*.html' ],
                     dest: './dist/templates',
+                    cwd: './app/templates'
                 }]
             }
         },
