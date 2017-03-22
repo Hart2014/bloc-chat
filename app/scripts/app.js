@@ -11,7 +11,8 @@
         $stateProvider
             .state('landing', {
                 url: '/',
-                controller: 'LandingCtrl as landing',
+                controller: 'LandingCtrl',
+                ctonrollerAs: 'landing',
                 templateUrl: '/templates/landing.html'
         });
     }

@@ -1,9 +1,7 @@
 <div>
-    <pre>{{ landing }}</pre>
-    <h1>
-        <li ng-repeat="room in rooms">
-            This is the landing view
-            {{ room.name }}
-        </li>
-    </h1>
+    <div class="col-xs-6 col-sm-3 col-sm-pull-9 sidebar-offcanvas" id="sidebar">
+        <div class="list-group" ng-repeat="room in rooms">
+            <a href="#" class="list-group-item">{{ room.$id }}</a>
+        </div>
+    </div>
 </div>

@@ -515,3 +515,25 @@ fieldset[disabled] .btn-success.active {
 div#maincontent {
   outline: none;
 }
+  
+  .sidebar-offcanvas {
+    position: absolute;
+    width: 60%; /* 6 columns */
+    display: none;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-right.active
+  .sidebar-offcanvas {
+    display: block;  
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .row-offcanvas-right.active {
+    
+  }
