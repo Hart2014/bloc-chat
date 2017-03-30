@@ -12,7 +12,7 @@
             .state('landing', {
                 url: '/',
                 controller: 'LandingCtrl',
-                ctonrollerAs: 'landing',
+                controllerAs: 'landing',
                 templateUrl: '/templates/landing.html'
         });
     }
