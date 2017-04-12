@@ -14,6 +14,14 @@
                 controller: 'LandingCtrl',
                 controllerAs: 'landing',
                 templateUrl: '/templates/landing.html'
+        })
+        
+        $stateProvider
+            .state('createRoom', {
+                url: '/createRoom',
+                controller: 'RoomCtrl',
+                controllerAs: 'create',
+                templateUrl: '/templates/createRoom.html'
         });
     }
     

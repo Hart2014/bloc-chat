@@ -6,6 +6,14 @@
     var rooms = $firebaseArray(ref);
             
     Room.all = rooms;
+      
+    Room.createRoom = function(name) {
+        var now = new Date();
+        rooms.$add({
+            name: name,
+            createdAt: now.getTime(),
+        });
+    };
 
     return Room;
   }

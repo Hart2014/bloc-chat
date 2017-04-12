@@ -10,7 +10,8 @@
         
         function activate() {
             console.log("Activating LandingCtrl");
-//            console.log($scope.rooms);
+            console.log(vm.rooms);
+            //console.log(Room.createRoom("Investors"));
         }
     }
         
