@@ -7,12 +7,8 @@
             
     Room.all = rooms;
       
-    Room.createRoom = function(name) {
-        var now = new Date();
-        rooms.$add({
-            name: name,
-            createdAt: now.getTime(),
-        });
+    Room.add = function(room){
+        rooms.$add(room);
     };
 
     return Room;

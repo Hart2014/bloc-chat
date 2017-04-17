@@ -1,16 +1,25 @@
-   <!-- <div>
- <div class="row-offcanvas row-offcanvas-left">
-        <div id="sidebar" class="sidebar-offcanvas">
-            <div class="col-md-12"> <!-->
-                <h3> Chat Rooms </h3>
-                    <ul class="nav nav-pills nav-stacked">
-                    <div class="side-bar" ng-repeat="room in landing.rooms">
-                        <li><a href="#">{{ room.name }}</a></li>
-                    </div>
-                    </ul>
-       <!--     </div>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/landing">Bloc Chat</a>
         </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class ="nav navbar-nav">
+            <li><a ng-click="landing.open()">Create Room</a></li>
+        </ul>
+      </div>
     </div>
-</div> !-->
+</nav>
+
+<h3> Chat Rooms </h3>
+<ul class="nav nav-pills nav-stacked">
+    <li ng-repeat="room in landing.rooms"><a href="#">{{ room.name }}</a></li>
+</ul>
 
     

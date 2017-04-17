@@ -7,7 +7,7 @@
             
     Message.all = messages;
       
-    Message.create_room = function(name) {
+    Message.createRoom = function(name) {
         var now = new Date();
         messages.$add({
             name: name,
@@ -15,8 +15,8 @@
         });
     };
       
-    Message.get_messages_for_room = function(roomId) {
-        // Get the message for the given room and return them.
+    Message.getMessages = function(roomId) {
+        return $firebaseArray(ref.orderByChild('roomID').equalTo(roomId));
     };
 
     return Message;

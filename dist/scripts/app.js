@@ -14,18 +14,18 @@
                 controller: 'LandingCtrl',
                 controllerAs: 'landing',
                 templateUrl: '/templates/landing.html'
-        })
-        
-        $stateProvider
-            .state('createRoom', {
-                url: '/createRoom',
-                controller: 'RoomCtrl',
-                controllerAs: 'create',
-                templateUrl: '/templates/createRoom.html'
         });
+//        
+//        $stateProvider
+//            .state('create', {
+//                url: '/create',
+//                controller: 'RoomCtrl',
+//                controllerAs: 'create',
+//                templateUrl: '/templates/create.html'
+//        });
     }
     
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase'])
         .config(config);
 })();

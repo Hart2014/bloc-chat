@@ -1,19 +1,18 @@
 (function(){
 
-    function RoomCtrl(Room, $scope, $firebase){
+    function RoomCtrl(Room, $uiModal, $scope, $firebase, $document){
         
-        var vm = this;
-        vm.rooms = Room.all;
-        
+        var room = this;
+                
         activate();
         
         function activate() {
             console.log("Activating RoomCtrl");
-            console.log(vm.rooms);
+            console.log(room.rooms);
         }
     }
         
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Room', '$firebase', LandingCtrl]);
+        .controller('RoomCtrl', ['Room', '$firebase', RoomCtrl]);
 })();
