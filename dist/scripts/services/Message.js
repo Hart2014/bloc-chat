@@ -7,15 +7,13 @@
             
     Message.all = messages;
       
-    Message.createRoom = function(name) {
-        var now = new Date();
-        messages.$add({
-            name: name,
-            createdAt: now.getTime
-        });
-    };
+    Message.send = function(newMessage) {
+        messages.$add(newMessage);
+        newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+    }
+
       
-    Message.getMessages = function(roomId) {
+    Message.getId = function(roomId) {
         return $firebaseArray(ref.orderByChild('roomID').equalTo(roomId));
     };
 
