@@ -4,7 +4,6 @@
         
         var landing = this;
         landing.rooms = Room.all;
-        landing.messages = Message.all;
         landing.currentRoom = null;
         
         landing.open = function(){

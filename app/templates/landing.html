@@ -24,9 +24,9 @@
 
 <div class="messages">
     <div class="messages-header">
-        <h3> Current Chat: {{ landing.currentRoom.name }}</h3>
+        <h3> Current Chat: {{ landing.currentRoom.name || landing.rooms[0].name }}</h3>
     </div>
-    <div class="messages-body" ng-repeat="message in landing.messages | filter:currentRoomFilter(landing.messages.roomId)">
+    <div class="messages-body" ng-repeat="message in landing.messages">
         <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
         <div class="user-message">{{ message.content }}</div>
     </div>

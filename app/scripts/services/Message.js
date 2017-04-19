@@ -14,8 +14,8 @@
 
       
     Message.getId = function(roomId) {
-        return $firebaseArray(ref.orderByChild('roomID').equalTo(roomId));
-    };
+        return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+    }
 
     return Message;
   }
