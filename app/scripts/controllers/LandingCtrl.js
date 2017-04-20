@@ -6,6 +6,8 @@
         landing.rooms = Room.all;
         landing.currentRoom = null;
         landing.currentUser = $cookies.get('blocChatUser');
+        landing.currentTime = new Date().getTime();
+
         
         landing.open = function(){
             $uibModal.open({
@@ -25,6 +27,7 @@
         landing.sendMessage = function(){
             landing.newMessage.roomId = landing.currentRoom.$id;
             landing.newMessage.username = landing.currentUser;
+            landing.newMessage.sentAt = landing.currentTime; 
             Message.send(landing.newMessage);
         }
     }
