@@ -1,59 +1,12 @@
 (function() {
-  function BlocChatCookies($cookies, $uibModal) {
-    activate();
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+  function BlocChatCookies($cookies, $uibModal) {  
     var currentUser = $cookies.get('blocChatUser');
     if (!currentUser || currentUser === '') {
         $uibModal.open({
             templateUrl: '/templates/login.html',
             size: 'sm',
-            controller: 'ModalCtrl as modal'
+            controller: 'LoginCtrl as login'
         });
-    }
-      
-    function activate(){
-        return "blocChatCookies running!";
     }
   }
 
