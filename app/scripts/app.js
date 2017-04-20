@@ -15,17 +15,9 @@
                 controllerAs: 'landing',
                 templateUrl: '/templates/landing.html'
         });
-//        
-//        $stateProvider
-//            .state('create', {
-//                url: '/create',
-//                controller: 'RoomCtrl',
-//                controllerAs: 'create',
-//                templateUrl: '/templates/create.html'
-//        });
     }
     
     angular
-        .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase'])
+        .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase', 'ngCookies'])
         .config(config);
 })();
