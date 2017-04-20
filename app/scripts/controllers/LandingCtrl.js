@@ -5,6 +5,7 @@
         var landing = this;
         landing.rooms = Room.all;
         landing.currentRoom = null;
+        landing.currentUser = $cookies.get('blocChatUser');
         
         landing.open = function(){
             $uibModal.open({
@@ -23,6 +24,7 @@
         // send message with currentRoom.$id property
         landing.sendMessage = function(){
             landing.newMessage.roomId = landing.currentRoom.$id;
+            landing.newMessage.username = landing.currentUser;
             Message.send(landing.newMessage);
         }
     }
