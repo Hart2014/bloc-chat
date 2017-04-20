@@ -4,7 +4,7 @@
         var login = this;
         
         login.addUser = function () {
-            $cookies.put('blocChatUser', modal.username);
+            $cookies.put('blocChatUser', login.username);
             $uibModalInstance.close();
         };
     }
