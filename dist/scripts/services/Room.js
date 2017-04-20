@@ -8,6 +8,10 @@
     Room.all = rooms;
       
     Room.add = function(room){
+        if (!room) {
+            alert("Please enter a room name!");
+            return;
+        }
         rooms.$add(room);
     };
 

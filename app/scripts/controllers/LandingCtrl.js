@@ -8,6 +8,7 @@
         landing.currentUser = $cookies.get('blocChatUser');
         
         landing.open = function(){
+            debugger;
             $uibModal.open({
                 templateUrl: '/templates/create.html',
                 size: 'sm',

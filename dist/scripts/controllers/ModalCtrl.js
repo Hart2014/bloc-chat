@@ -1,5 +1,5 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
+    function ModalCtrl(Room, $uibModalInstance, $cookies) {
         
         var modal = this;
         
@@ -15,5 +15,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance','$cookies', ModalCtrl]);
 })();

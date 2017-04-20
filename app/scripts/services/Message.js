@@ -10,7 +10,9 @@
     // send function adding newMessage in LandingCtrl with .sentAt property
     Message.send = function(newMessage) {
         messages.$add(newMessage);
+        newMessage.username = landing.currentUser;
         newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+        messages.form.$setPristine();
     }
 
     // get roomId of messages for recall in rooms  
