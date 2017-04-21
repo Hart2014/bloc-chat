@@ -29,6 +29,7 @@
             landing.newMessage.username = landing.currentUser;
             landing.newMessage.sentAt = landing.currentTime; 
             Message.send(landing.newMessage);
+            landing.newMessage.content = '';
         }
     }
         
