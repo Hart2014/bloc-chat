@@ -36,7 +36,7 @@
             {{ message.content }}</div>
     </div>
     <div class="message-field">
-        <input type="text" name="input" placeholder="Message.." class="message-box" ng-model="landing.newMessage.content" style="width:500px;">
+        <input type="text" name="input" placeholder="Message.." class="message-box" ng-model="landing.newMessage.content" style="width:500px;" required=" " ng-keyup="$event.keyCode == 13 && landing.sendMessage()">
         <button class="btn-new-message" type="button" ng-click="landing.sendMessage()">Send message</button>
     </div>
 </div>
